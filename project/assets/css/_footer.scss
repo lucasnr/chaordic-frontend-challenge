@@ -1,0 +1,28 @@
+@import './colors';
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+
+  .footer__site-url {
+    color: $primary;
+    font-size: 1.25em;
+    margin: 0px;
+  }
+
+  .footer__social-media {
+    align-items: center;
+    display: flex;
+
+    .footer__social-media__item {
+      display: inline-flex;
+      text-decoration: none;
+
+      & + .footer__social-media__item {
+        margin-left: 2em;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import './colors';
+@import './utils';
+
+.hits {
+  background-color: $background;
+  padding: calc(#{$top5AfterSize} + 1em) 15px;
+  text-align: center;
+
+  .hits__title {
+    color: $primary;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .hits__amount {
+    background-color: #fff;
+    border: 1px solid rgba($color: $secondary, $alpha: 0.4);
+    border-radius: 4px;
+    color: $primary;
+    display: inline-block;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    margin-top: 1.25rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .hits__description {
+    color: $secondary;
+    display: block;
+  }
+}
