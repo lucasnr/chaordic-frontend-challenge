@@ -26,13 +26,18 @@
 						acompanhe enquanto viajam através da internet.
 					</p>
 
-					<form class="shorter__form">
-						<input
-							type="text"
-							placeholder="Cole o seu link aqui"
-							class="shorter__form__input"
-						/>
-						<button class="shorter__form__button">Encurtar</button>
+					<form class="shorter__form" id="form">
+						<div class="shorter__form__input-container">
+							<input
+								type="text"
+								placeholder="Cole o seu link aqui"
+								class="shorter__form__input"
+							/>
+							<span class="shorter__remove__icon">&#10006;</span>
+						</div>
+						<button class="shorter__form__button">
+							<span>Encurtar</span>
+						</button>
 					</form>
 				</div>
 			</section>
@@ -80,5 +85,7 @@
 				</a>
 			</div>
 		</footer>
+
+		<script src="./assets/js/form.js"></script>
 	</body>
 </html>

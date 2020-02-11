@@ -48,17 +48,32 @@ button {
   .shorter .shorter__form {
     display: flex;
     margin-top: 1.5em; }
+    .shorter .shorter__form .shorter__form__input-container {
+      align-items: center;
+      border-bottom: 2px solid #fe6c17;
+      display: flex;
+      flex: 1;
+      margin-right: 10px; }
+    .shorter .shorter__form .shorter__remove__icon {
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out; }
+      .shorter .shorter__form .shorter__remove__icon.show {
+        opacity: 1; }
     .shorter .shorter__form .shorter__form__input {
       background: none;
       border: none;
-      border-bottom: 2px solid #fe6c17;
       color: #fe6c17;
       font-size: 1em;
-      margin-right: 10px;
       padding: 0.5em 0px;
-      width: 100%; }
+      width: 100%;
+      transition: opacity 300ms ease-in-out; }
+      .shorter .shorter__form .shorter__form__input:read-only {
+        color: #fff; }
       .shorter .shorter__form .shorter__form__input::placeholder {
         color: #fe6c17; }
+      .shorter .shorter__form .shorter__form__input.fade {
+        opacity: 0; }
     .shorter .shorter__form .shorter__form__button {
       background-color: #fe6c17;
       border: none;
@@ -67,6 +82,10 @@ button {
       font-weight: bold;
       padding: 0.75em;
       text-transform: uppercase; }
+      .shorter .shorter__form .shorter__form__button span {
+        transition: opacity 300ms ease-in-out; }
+        .shorter .shorter__form .shorter__form__button span.fade {
+          opacity: 0; }
 
 .top-5 {
   align-items: center;

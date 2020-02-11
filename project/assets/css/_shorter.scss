@@ -30,18 +30,43 @@
     display: flex;
     margin-top: 1.5em;
 
+    .shorter__form__input-container {
+      align-items: center;
+      border-bottom: 2px solid $form;
+      display: flex;
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .shorter__remove__icon {
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+
+      &.show {
+        opacity: 1;
+      }
+    }
+
     .shorter__form__input {
       background: none;
       border: none;
-      border-bottom: 2px solid $form;
       color: $form;
       font-size: 1em;
-      margin-right: 10px;
       padding: 0.5em 0px;
       width: 100%;
 
+      &:read-only {
+        color: #fff;
+      }
+
       &::placeholder {
         color: $form;
+      }
+
+      transition: opacity 300ms ease-in-out;
+      &.fade {
+        opacity: 0;
       }
     }
 
@@ -53,6 +78,13 @@
       font-weight: bold;
       padding: 0.75em;
       text-transform: uppercase;
+
+      span {
+        transition: opacity 300ms ease-in-out;
+        &.fade {
+          opacity: 0;
+        }
+      }
     }
   }
 }
