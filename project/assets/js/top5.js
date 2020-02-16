@@ -1,7 +1,7 @@
 const list = document.querySelector("#top-5-list");
 
 fetch(
-	"https://raw.githubusercontent.com/chaordic/frontend-intern-challenge/master/Assets/urls.json"
+	"https://raw.githubusercontent.com/lucasnr/frontend-intern-challenge/master/Assets/urls.json"
 )
 	.then(function(response) {
 		return response.json();
