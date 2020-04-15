@@ -1,5 +1,10 @@
 @import './colors';
 
+.shorter-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
 .shorter {
 	align-items: center;
 	background-image: url(../img/background-home.jpg);

@@ -4,7 +4,7 @@
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	padding: 1rem 0px;
+	padding: 1rem;
 	position: relative;
 
 	@media screen and (min-width: 576px) {
@@ -13,7 +13,6 @@
 
 	.top-5__container {
 		max-width: 576px;
-		padding: 0px 1rem;
 		width: 100%;
 	}
 

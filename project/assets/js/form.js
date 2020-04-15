@@ -1,38 +1,30 @@
-const form = document.querySelector("#form");
+const form = $("#form");
+const button = form.find("button");
 
-const button = form.querySelector("button");
-const buttonText = button.querySelector("span");
+form.submit(function (event) {
+	event.preventDefault();
+	if (form.hasClass("submitted")) return;
 
-const input = form.querySelector("input");
-const inputIcon = form.querySelector(".form__input-icon");
+	const buttonText = button.find("span");
+	const input = form.find("input");
+	const inputIcon = form.find(".form__input-icon");
 
-setOnSubmitHandler();
-setButtonWidth();
+	const fadeDuration = 300;
+	buttonText.addClass("fade");
+	input.addClass("fade");
+	setTimeout(function () {
+		buttonText.text("Copiar");
 
-function setOnSubmitHandler() {
-	form.onsubmit = function (event) {
-		event.preventDefault();
-		if (form.classList.contains("submitted")) return;
+		input.val("http://chr.dc/xyzxyz");
+		input.attr("readOnly", true);
+		input.css("color", "#fff");
 
-		const fadeDuration = 300;
-		buttonText.classList.add("fade");
-		input.classList.add("fade");
-		setTimeout(function () {
-			buttonText.innerText = "Copiar";
+		inputIcon.addClass("show");
+		buttonText.removeClass("fade");
+		input.removeClass("fade");
+	}, fadeDuration);
 
-			input.value = "http://chr.dc/xyzxyz";
-			input.setAttribute("readOnly", true);
+	form.addClass("submitted");
+});
 
-			inputIcon.classList.add("show");
-			buttonText.classList.remove("fade");
-			input.classList.remove("fade");
-		}, fadeDuration);
-
-		form.classList.add("submitted");
-	};
-}
-
-function setButtonWidth() {
-	const buttonWidth = button.offsetWidth;
-	button.style.width = buttonWidth + "px";
-}
+button.width(button.outerWidth());
