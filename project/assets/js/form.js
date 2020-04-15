@@ -1,27 +1,29 @@
 const form = document.querySelector("#form");
+
 const button = form.querySelector("button");
 const buttonText = button.querySelector("span");
-const removeIcon = form.querySelector(".shorter__remove__icon");
+
 const input = form.querySelector("input");
+const inputIcon = form.querySelector(".form__input-icon");
 
+setOnSubmitHandler();
 setButtonWidth();
-setFormSubmit();
 
-function setFormSubmit() {
-	form.onsubmit = function(event) {
+function setOnSubmitHandler() {
+	form.onsubmit = function (event) {
 		event.preventDefault();
 		if (form.classList.contains("submitted")) return;
 
 		const fadeDuration = 300;
 		buttonText.classList.add("fade");
 		input.classList.add("fade");
-		setTimeout(function() {
+		setTimeout(function () {
 			buttonText.innerText = "Copiar";
 
 			input.value = "http://chr.dc/xyzxyz";
 			input.setAttribute("readOnly", true);
 
-			removeIcon.classList.add("show");
+			inputIcon.classList.add("show");
 			buttonText.classList.remove("fade");
 			input.classList.remove("fade");
 		}, fadeDuration);

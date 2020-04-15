@@ -1,0 +1,29 @@
+@import './colors';
+
+.shorter {
+	align-items: center;
+	background-image: url(../img/background-home.jpg);
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	min-height: 80vh;
+	text-align: center;
+
+	.shorter__container {
+		max-width: 576px;
+		padding: 0px 1rem;
+	}
+
+	.shorter__title {
+		font-size: 2.75rem;
+		font-family: 'Roboto Slab', sans-serif;
+	}
+
+	.shorter__description {
+		font-size: 1.125rem;
+		font-weight: normal;
+		margin: 1rem 0px;
+	}
+}

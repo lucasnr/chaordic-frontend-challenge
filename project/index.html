@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Chaordic</title>
 
-		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
 
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap"
@@ -15,54 +15,62 @@
 	</head>
 	<body>
 		<header class="header">
-			<img src="../Assets/logo-chaordic.png" alt="Logomarca do Chaordic" />
+			<img src="./assets/img/logo-chaordic.png" alt="Logomarca do Chaordic" />
 		</header>
+
 		<main class="main">
 			<section class="shorter">
 				<div class="shorter__container">
 					<h1 class="shorter__title">Encurte seus links.</h1>
-					<p class="shorter__description">
+					<h2 class="shorter__description">
 						Links são longos. Encurte os links que você deseja compartilhar, e
 						acompanhe enquanto viajam através da internet.
-					</p>
+					</h2>
 
-					<form class="shorter__form" id="form">
-						<div class="shorter__form__input-container">
+					<form class="form" id="form">
+						<div class="form__input-container">
 							<input
 								type="text"
 								placeholder="Cole o seu link aqui"
-								class="shorter__form__input"
+								class="form__input"
 							/>
-							<span class="shorter__remove__icon">&#10006;</span>
+							<i class="form__input-icon">&#10006;</i>
 						</div>
-						<button class="shorter__form__button">
+						<button class="form__button" type="submit">
 							<span>Encurtar</span>
 						</button>
 					</form>
 				</div>
 			</section>
+
 			<section class="top-5">
 				<div class="top-5__container">
-					<h2 class="top-5__title">Top 5</h2>
+					<h3 class="top-5__title">Top 5</h3>
 					<ul class="top-5__list" id="top-5-list"></ul>
 				</div>
 			</section>
+
 			<section class="hits">
-				<h2 class="hits__title">Hits</h2>
-				<h3 class="hits__amount">35.713.571</h3>
+				<h3 class="hits__title">Hits</h3>
+				<h4 class="hits__amount">35.713.571</h4>
 				<span class="hits__description">Cliques em links</span>
 			</section>
 		</main>
+
 		<footer class="footer">
-			<h3 class="footer__site-url">chr.dc</h3>
-			<div class="footer__social-media">
-				<a href="#" class="footer__social-media__item">
-					<img src="../Assets/icon-twitter.png" alt="Icone do twitter" />
-				</a>
-				<a href="#" class="footer__social-media__item">
-					<img src="../Assets/icon-facebook.png" alt="Icone do facebook" />
-				</a>
-			</div>
+			<h5 class="footer__site-url">chr.dc</h5>
+			<ul class="footer__social-media">
+				<li>
+					<a href="#">
+						<img src="./assets/img/icon-twitter.png" alt="Icone do twitter" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="./assets/img/icon-facebook.png" alt="Icone do facebook" />
+					</a>
+				</li>
+			</ul>
 		</footer>
 
 		<script src="./assets/js/form.js"></script>

@@ -1,0 +1,32 @@
+@import './colors';
+
+.footer {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	padding: 1rem;
+
+	.footer__site-url {
+		color: $primary;
+		font-size: 1.25rem;
+	}
+
+	.footer__social-media {
+		align-items: center;
+		display: flex;
+
+		li + li {
+			margin-left: 2rem;
+		}
+
+		a {
+			display: flex;
+
+			img {
+				display: block;
+				height: 1.625rem;
+				width: 1.625rem;
+			}
+		}
+	}
+}
