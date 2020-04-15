@@ -38,6 +38,18 @@
 			color: $form;
 		}
 
+		&::-webkit-input-placeholder {
+			color: $form;
+		}
+
+		&:-ms-input-placeholder {
+			color: $form;
+		}
+
+		&::-ms-input-placeholder {
+			color: $form;
+		}
+
 		&.fade {
 			opacity: 0;
 		}
